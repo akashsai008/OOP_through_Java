@@ -1,0 +1,18 @@
+import java.uti.*;
+class ParConstructor
+{
+    String name;
+    int rollno;
+    String sec;
+    Main(String name,int rollno,String sec)
+    {
+        this.name=name;
+        this.rollno=rollno;
+        this.sec=sec;
+    }
+    public static void main(String args[])
+    {
+        Main obj=new Main("Akash",645,"A");
+        System.out.println(obj.name+" "+obj.rollno+" "+obj.sec);
+    }
+}

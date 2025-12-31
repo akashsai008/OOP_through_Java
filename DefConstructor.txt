@@ -1,0 +1,15 @@
+import java.util.*;
+class DefConstructor
+{
+    String name;
+    int rollno;
+    String sec;
+    public static void main(String args[])
+    {
+        Main obj=new Main();
+        obj.name="Akash";
+        obj.rollno=645;
+        obj.sec="A";
+        System.out.println(obj.name+" "+obj.rollno+" "+obj.sec);
+    }
+}
