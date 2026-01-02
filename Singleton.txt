@@ -1,0 +1,29 @@
+public class Main
+{
+    public static void main(String args[])
+    {
+        Singleton obj=Singleton.getInstance();
+        obj.x=10;
+        System.out.println(obj.x);
+    }
+}
+class Singleton
+{
+    //Reference variable made private
+    static private Singleton obj;
+    int x;
+    //Default constructor made private
+    private Singleton()
+    {
+        
+    }
+    //to get the object, only one instance is created
+    public static Singleton getInstance()
+    {
+        if(obj==null)
+        return new Singleton();
+        
+        return obj;
+    }
+}
+

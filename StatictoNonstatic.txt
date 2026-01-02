@@ -1,0 +1,20 @@
+import java.util.*;
+class Main
+{
+    static void fun(Main obj)
+    {
+        System.out.println(obj);
+        obj.fun1(); //accessing non static from static need instance
+    }
+    void fun1()
+    {
+        System.out.println("hello");
+        
+    }
+    public static void main(String args[])
+    {
+        Main obj=new Main();
+        Main.fun(obj); //sttaic members are accessed using class name
+        obj1.fun1(); //static can access non static members through instance only
+    }
+}
