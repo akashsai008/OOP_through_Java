@@ -1,0 +1,51 @@
+import java.util.*;
+class InheritanceExperiment
+{
+    public static void main(String args[])
+    {
+        BoxWeight box=new BoxWeight();
+        BoxWeight box2=new BoxWeight(10,20,30,40);
+        System.out.println(box.length+" "+box.width+" "+box.height+" "+box.weight);
+          System.out.println(box2.length+" "+box2.width+" "+box2.height+" "+box2.weight);
+          
+          
+          //access depends on reference type not on object
+          Box b1=new BoxWeight();
+          System.out.println(b1.length+" "+b1.width+" "+b1.height);
+          
+                 
+        //   BoxWeight  b2=new Box();
+        //   System.out.println(b2.weight);
+        //above is not compatiable since parent object cannot be directly accessed by parent
+    }
+}
+class Box
+{
+    int length,width,height;
+    public Box()
+    {
+        length=-1;
+        width=-1;
+        height=-1;
+    }
+    public Box(int length,int width,int height)
+    {
+        this.length=length;
+        this.width=width;
+        this.height=height;
+    }
+}
+
+class BoxWeight extends Box
+{
+    int weight;
+    public BoxWeight()
+    {
+        weight=1;
+    }
+    public BoxWeight(int length,int width,int height,int weight)
+    {
+        super(length,width,height);
+        this.weight=weight;
+    }
+}
